@@ -1,0 +1,67 @@
+//=============================================================
+// Large devices (desktops, less than 1200px)
+//=============================================================
+@include media-breakpoint-down(lg) {}
+
+//=============================================================
+// Large devices (desktops, less than 992px)
+//=============================================================
+@include media-breakpoint-down(md) {
+  .navbar-expand-lg{
+    .navbar-nav{
+        text-align: center;
+    }
+       .navbar-toggler {
+    background: $color-2;
+    @include flexCenter();
+
+    &::after {
+      content: '\f141';
+      color: $color-1;
+      font-family: 'Font Awesome 5 Free';
+    }
+  }}
+  footer .footer-div ul {
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+//=============================================================
+// Large devices (desktops, less than 768px)
+//=============================================================
+@include media-breakpoint-down(sm) {
+    .home h1{
+        font-size: 2.5rem;
+    }
+  footer {
+    .res-mb {
+      margin-bottom: 40px;
+    }
+  }
+  .portfolio{
+      h2{
+          font-size: 38px ;
+      }
+  }
+}
+
+//=============================================================
+// Large devices (desktops, less than 575px)
+//=============================================================
+@include media-breakpoint-down(xs) {
+  .navbar {
+    text-align: center;
+    display: unset;
+
+    .navbar-brand {
+      width: 100%;
+    }
+
+    .navbar-toggler {
+      margin: 0 auto;
+    }
+  }
+
+}

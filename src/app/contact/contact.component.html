@@ -1,0 +1,50 @@
+<section class="contact">
+  <div class="container">
+    <h2>CONTACT ME</h2>
+    <div class="break-text">
+      <div class="line right-m"></div>
+      <i class="fas fa-star"></i>
+      <div class="line left-m"></div>
+    </div>
+    <div class="col-lg-8 m-auto">
+      <form [formGroup]='contactForm' (ngSubmit)=(submitContactForm(contactForm))>
+          
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" formControlName='name' class="form-control" placeholder="Name" id="Name" />
+          <div *ngIf="contactForm.get('name')?.errors != null && contactForm.get('name')?.touched" class="alert alert-danger">
+            <p *ngIf="contactForm.get('name')?.errors?.required">name is required</p>
+            <p *ngIf="contactForm.get('name')?.errors?.minlength">name is min Length 3</p>
+            <p *ngIf="contactForm.get('name')?.errors?.maxlength">name is max Length 10</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="emailAddress">Email Address</label>
+          <input type="email" formControlName='email' class="form-control" placeholder="Email Address"
+            id="emailAddress" />
+          <div *ngIf="contactForm.get('email')?.errors != null && contactForm.get('email')?.touched" class="alert alert-danger">
+            <p *ngIf="contactForm.get('email')?.errors?.required">Email is required</p>
+            <p *ngIf="contactForm.get('email')?.errors?.email">This Not Email</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="text" formControlName='phone' class="form-control" placeholder="Phone Number" id="phoneNumber" />
+          <div *ngIf="contactForm.get('phone')?.errors != null && contactForm.get('phone')?.touched" class="alert alert-danger">
+            <p *ngIf="contactForm.get('phone')?.errors?.required">name is required</p>
+            <p *ngIf="contactForm.get('phone')?.errors?.pattern">Pleas check your phone number</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea rows="5" formControlName='message' class="form-control" placeholder="Message"
+            id="message"></textarea>
+          <div *ngIf="contactForm.get('message')?.errors != null && contactForm.get('message')?.touched" class="alert alert-danger">
+            <p *ngIf="contactForm.get('message')?.errors?.required">name is required</p>
+          </div>
+      </div>
+        <button [disabled]="contactForm.invalid" type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </div>
+</section>

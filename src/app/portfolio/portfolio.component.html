@@ -1,0 +1,55 @@
+<section class="portfolio">
+  <div class="container">
+    <h2>PORTFOLIO</h2>
+    <div class="break-text">
+      <div class="line right-m"></div>
+      <i class="fas fa-star"></i>
+      <div class="line left-m"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let img of images">
+        <div class="img-div-portfolio" data-toggle="modal" data-target="#img-modal" (click)=(tackSrc($event))>
+          <img [src]="img" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade modal-portfolio p-0" id="img-modal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="container">
+        <div class="col-lg-8 m-auto">
+          <div class="modal-body">
+            <i class="fas fa-times close" data-dismiss="modal"></i>
+            <h2>TASTY CAKE</h2>
+            <div class="break-text">
+              <div class="line right-m"></div>
+              <i class="fas fa-star"></i>
+              <div class="line left-m"></div>
+            </div>
+            <div>
+              <img [src]="imgSrc" alt="" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Mollitia neque assumenda ipsam nihil, molestias magnam,
+                recusandae quos quis inventore quisquam velit asperiores,
+                vitae? Reprehenderit soluta, eos quod consequuntur itaque.
+                Nam.
+              </p>
+            </div>
+          </div>
+          <div class="modal-foo">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              <i class="fas fa-times"></i>
+              Close Window
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

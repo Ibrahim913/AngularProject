@@ -1,0 +1,39 @@
+// Set direction ltr
+@import "./direction-ltr.scss";
+
+// Bootstrap ltr
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+/*font*/
+$bold : 'Montserrat-Bold';
+$regular : 'Lato-Regular';
+@font-face {
+    font-display: swap;
+    font-family: $regular;
+    src: url("./fonts/Lato-Regular.eot");
+    src: url("./fonts/Lato-Regular.eot?#iefix") format('embedded-opentype'),
+         url("./fonts/Lato-Regular.otf") format('otf'),
+         url("./fonts/Lato-Regular.svg#Lato-Regular") format('svg'),
+         url("./fonts/Lato-Regular.ttf") format('truetype'),
+         url("./fonts/Lato-Regular.woff") format('woff'),
+         url("./fonts/Lato-Regular.woff2") format('woff2');
+    font-weight: normal ;
+    font-style: normal;
+    }
+  
+@font-face {
+    font-display: swap;
+    font-family: $bold;
+    src: url("./fonts/Montserrat-Bold.eot");
+    src: url("./fonts/Montserrat-Bold.eot?#iefix") format('embedded-opentype'),
+         url("./fonts/Montserrat-Bold.otf") format('otf'),
+         url("./fonts/Montserrat-Bold.svg#Montserrat-Bold") format('svg'),
+         url("./fonts/Montserrat-Bold.ttf") format('truetype'),
+         url("./fonts/Montserrat-Bold.woff") format('woff'),
+         url("./fonts/Montserrat-Bold.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+// Styles
+@import "./import";
